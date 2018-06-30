@@ -1,0 +1,140 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+     <title>Registration Form</title>
+    
+ 
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<script type="text/javascript" src="js/jquery-1.6.js"></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/cufon-replace.js"></script> 
+<script type="text/javascript" src="js/Vegur_700.font.js"></script>
+<script type="text/javascript" src="js/Vegur_400.font.js"></script>
+<script type="text/javascript" src="js/Vegur_300.font.js"></script>
+<script type="text/javascript" src="js/atooltip.jquery.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="js/html5.js"></script>
+    <style type="text/css">
+        .box1 figure {behavior:url(js/PIE.htc)}
+    </style>
+<![endif]-->
+<!--[if lt IE 7]>
+        <div style='clear:both;text-align:center;position:relative'>
+            <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0" alt="" /></a>
+        </div>
+<![endif]-->
+<script type="text/javascript">
+        function validate_form() {
+            if (document.emp.emp_name.value == "") {
+                alert("Please fill in the 'Owner Name' box.");
+                return false;
+            }
+            if (document.emp.num.value == "") {
+                alert("Enter AAdhar Number");
+                return false;
+            }
+            alert("sucessfully Submitted");
+ 
+ 
+ 
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(document.emp.email_id.value)) {
+                alert("You have entered an invalid email address!")
+                return (false)
+            }
+        }
+ 
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (charCode != 46 && charCode > 31 &&
+                (charCode < 48 || charCode > 57)) {
+                alert("Enter Number");
+                return false;
+            }
+            return true;
+        }
+ 
+ 
+        //-->
+    </script>
+</head>
+<body id="page5">
+<div class="body1"> 
+<!-- / header -->
+<!-- content -->
+         
+                 
+     <form  class="owntable" name="emp" action=""  onsubmit="return validate_form();" method="post">
+        <table class="tabl" align="center" width=40% width="100%" cellspacing="2" cellpadding="2" border="5">
+            <tr>
+                <td colspan="2" align="center"><b>OWNER Registration Form.</b></td>
+ 
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">OWNER Name<span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="text" value="" name="emp_name" size="24"></td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">AAdhar Number<span style="color:red">*</span></td>
+                <td width="57%">
+                    <input type="text" value="" name="num" onkeypress="return isNumberKey(event)" size="24"></td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">Address</td>
+ 
+                <td width="57%"><textarea rows="4" maxlen="200" name="S2" cols="20"></textarea></td>
+            </tr <tr>
+ 
+            <td align="left" valign="top" width="41%">Contact Number</td>
+            <td width="57%">
+                <input type="text" value="" onkeypress="return isNumberKey(event)" name="txtFName1" size="24"></td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%"> Location</td>
+                <td width="57%"><select name="mydropdown">
+<option value="Default">Default</option>
+<option value="RAJASTHAN">RAJASTHAN</option>
+<option value="MAHARASTRA">MAHARASTRA</option>
+<option value="UTRAKHAND">UTRAKHAND</option>
+<option value="Bangalore">GUJARAT</option>
+<option value="Chennai">Chandigarh</option>
+ 
+ 
+ 
+ 
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">Email<span style="color:red">*</span></td>
+                <td width="57%">
+                    <input type="text" value="" name="email_id" size="24"></td>
+            </tr>
+ 
+            <tr>
+                <td colspan="2">
+                    <p align="center">
+                        <input type="submit" value="  Submit" name="B4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="reset" value="  Reset All   " name="B5"></td>
+            </tr>
+ 
+        </table>
+    </form>
+
+
+             
+         
+<!-- / content -->
+<!-- footer -->
+        <footer>
+             
+        </footer>
+<!-- / footer -->
+    </div>
+</div>
+<script type="text/javascript">Cufon.now();</script>
+</body>
+</html>
